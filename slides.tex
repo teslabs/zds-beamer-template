@@ -1,0 +1,140 @@
+%\documentclass{beamer}
+\documentclass[handout]{beamer}
+
+% packages
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[justification=centering]{caption}
+\usepackage{fontawesome5}
+\usepackage{color}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[framemethod=tikz]{mdframed}
+
+\definecolor{codebg}{RGB}{240, 242, 244}
+\mdfdefinestyle{code}{
+  backgroundcolor=codebg,
+  roundcorner=5pt,
+  innerleftmargin=0,
+  innerrightmargin=0,
+  linewidth=0
+}
+\surroundwithmdframed[style=code]{minted}
+
+\graphicspath{{images/}}
+
+\usetheme{zds}
+
+% details ----------------------------------------------------------------------
+
+\title{The Title Of The Presentation\\Goes Here}
+\subtitle{Optional Subtitle}
+\author{
+  \texorpdfstring{
+    Author Name\\
+    \href{mailto:author@name.com}{author@name.com}
+  }{Author Name}
+}
+\institute{Company Name}
+\date{x\textsuperscript{th} June 2022}
+
+% document ---------------------------------------------------------------------
+
+\begin{document}
+
+% section: title & toc ---------------------------------------------------------
+
+\begin{frame}[plain]
+  \titlepage{}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+% section: introduction --------------------------------------------------------
+
+\section{Introduction}
+
+\begin{frame}
+  \begin{center}
+    \Huge \textbf{Introduction}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sample Items}
+
+  \begin{itemize}
+    \item<1-> Sample text in \textbf{bold}
+    \item<2-> Sample text in \textit{italic}
+    \item<3-> Sample text in \texttt{monospaced}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sample Figure}
+
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{zds-logo}
+    \caption{The Zephyr Developer Summit 2022 Logo}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Sample Code}
+
+  \begin{listing}[H]
+    \begin{minted}[fontsize=\scriptsize]{c}
+      #include <stdio.h>
+
+      int main(void)
+      {
+          printf("Hello World!\n");
+          return 0;
+      }
+    \end{minted}
+    \caption{Hello world sample}
+  \end{listing}
+\end{frame}
+
+% section: conclusions ---------------------------------------------------------
+
+\section{Conclusions}
+
+\begin{frame}
+  \begin{center}
+    \Huge
+    \textbf{Conclusions}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusions}
+
+  \begin{itemize}
+    \item<1-> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    \item<2-> Duis nec lorem euismod sapien iaculis rhoncus ac non ipsum.
+    \item<3-> Sed eget lorem semper, scelerisque massa vitae, auctor mi.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[plain]{}
+  \begin{center}
+    \huge
+    \textbf{THANK YOU!} \\
+    Questions? \\
+    \vspace{2.5em}
+    \normalsize
+    \faFilePowerpoint~\url{https://url.to/slides.pdf} \\
+  \end{center}
+\end{frame}
+
+\end{document}
+
